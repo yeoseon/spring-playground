@@ -5,7 +5,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//@SpringBootApplication은 아래 3개의 어노테이션으로 구성된다.
+// @SpringBootApplication은 아래 3개의 어노테이션으로 구성된다.
 //* ```@SpringBootConfiguration```
 //* ```@ComponentScan```
 //* ```@EnableAutoConfiguration```
