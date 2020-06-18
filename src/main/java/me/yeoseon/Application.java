@@ -3,6 +3,7 @@ package me.yeoseon;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 // @SpringBootApplication은 아래 3개의 어노테이션으로 구성된다.
@@ -14,5 +15,14 @@ public class Application {
         SpringApplication application = new SpringApplication(Application.class);
         application.setWebApplicationType(WebApplicationType.NONE);
         application.run(args);
+    }
+
+    @Bean
+    public Holoman holoman() {
+        Holoman holoman = new Holoman();
+        holoman.setName("celine");
+        holoman.setHowLong(60);
+
+        return holoman;
     }
 }
