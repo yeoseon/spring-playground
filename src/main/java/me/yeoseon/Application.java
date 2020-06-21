@@ -16,13 +16,4 @@ public class Application {
         application.setWebApplicationType(WebApplicationType.NONE);
         application.run(args);
     }
-
-    @Bean
-    public Holoman holoman() {
-        Holoman holoman = new Holoman();
-        holoman.setName("celine");
-        holoman.setHowLong(60);
-
-        return holoman;
-    }
 }
