@@ -1,15 +1,15 @@
 package me.yeoseon;
 
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
-public class SampleListener implements ApplicationRunner {
+import java.util.Arrays;
 
+@Component
+public class SampleListener implements CommandLineRunner {
     @Override
-    public void run(ApplicationArguments args) throws Exception {
-        System.out.println("foo: " + args.containsOption("foo"));
-        System.out.println("bar: " + args.containsOption("bar"));
+    public void run(String... args) throws Exception {
+        //JVM 옵션은 무시한다.
+        Arrays.stream(args).forEach(System.out::println);
     }
 }
