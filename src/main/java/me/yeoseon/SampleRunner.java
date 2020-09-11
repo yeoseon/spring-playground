@@ -12,7 +12,7 @@ public class SampleRunner implements ApplicationRunner {
     @Autowired
     YeoseonProperties yeoseonProperties;
 
-    @Value("${yeoseon.name}")
+    @Value("${yeoseon.name}")   // 다음과 같이 사용하면 Type-Safe 하지 않다.
     private String name;
 
     @Override
@@ -20,6 +20,7 @@ public class SampleRunner implements ApplicationRunner {
         System.out.println("===============");
         System.out.println(yeoseonProperties.getName());
         System.out.println(yeoseonProperties.getAge());
+        System.out.println(yeoseonProperties.getSesseionTimeout());
         System.out.println("===============");
     }
 }
