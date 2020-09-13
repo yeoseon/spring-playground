@@ -12,12 +12,16 @@ public class SampleRunner implements ApplicationRunner {
     @Autowired
     YeoseonProperties yeoseonProperties;
 
+    @Autowired
+    private String hello;
+
     @Value("${yeoseon.name}")   // 다음과 같이 사용하면 Type-Safe 하지 않다.
     private String name;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("===============");
+        System.out.println(hello);
         System.out.println(yeoseonProperties.getName());
         System.out.println(yeoseonProperties.getAge());
         System.out.println(yeoseonProperties.getSesseionTimeout());
