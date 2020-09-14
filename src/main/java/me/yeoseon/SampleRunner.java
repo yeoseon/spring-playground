@@ -1,13 +1,18 @@
 package me.yeoseon;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class SampleRunner implements ApplicationRunner {
+
+    private Logger logger = LoggerFactory.getLogger(SampleRunner.class);
 
     @Autowired
     YeoseonProperties yeoseonProperties;
@@ -20,11 +25,9 @@ public class SampleRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("===============");
-        System.out.println(hello);
-        System.out.println(yeoseonProperties.getName());
-        System.out.println(yeoseonProperties.getAge());
-        System.out.println(yeoseonProperties.getSesseionTimeout());
-        System.out.println("===============");
+        logger.debug("===============");
+        logger.debug(hello);
+        logger.debug(yeoseonProperties.getName());
+        logger.debug("===============");
     }
 }
