@@ -1254,3 +1254,22 @@ Unconditional classes:
 2020-09-14 14:07:14.153 DEBUG 39552 --- [main] me.yeoseon.SampleRunner                  : ===============
 2020-09-14 14:07:14.155  INFO 39552 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@942a29c: startup date [Mon Sep 14 14:07:12 KST 2020]; root of context hierarchy
 2020-09-14 14:07:14.158  INFO 39552 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-09-14 14:24:17.603  INFO 39898 --- [main] m.y.Application                          : Starting Application on yun-yeoseon-ui-MacBookPro-3.local with PID 39898 (started by yyskr in /Users/yyskr/Documents/Dev/15 Spring Study/springboot-getting-started)
+2020-09-14 14:24:17.612  INFO 39898 --- [main] m.y.Application                          : The following profiles are active: prod,proddb
+2020-09-14 14:24:17.726  INFO 39898 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@20435c40: startup date [Mon Sep 14 14:24:17 KST 2020]; root of context hierarchy
+2020-09-14 14:24:19.731  INFO 39898 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-09-14 14:24:19.750  INFO 39898 --- [main] m.y.Application                          : Started Application in 2.873 seconds (JVM running for 4.206)
+2020-09-14 14:24:19.787  INFO 39898 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@20435c40: startup date [Mon Sep 14 14:24:17 KST 2020]; root of context hierarchy
+2020-09-14 14:24:19.790  INFO 39898 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-09-14 14:24:35.827  INFO 39913 --- [main] m.y.Application                          : Starting Application on yun-yeoseon-ui-MacBookPro-3.local with PID 39913 (started by yyskr in /Users/yyskr/Documents/Dev/15 Spring Study/springboot-getting-started)
+2020-09-14 14:24:35.837 DEBUG 39913 --- [main] m.y.Application                          : Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2020-09-14 14:24:35.839  INFO 39913 --- [main] m.y.Application                          : The following profiles are active: prod,proddb
+2020-09-14 14:24:35.928  INFO 39913 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@68dc098b: startup date [Mon Sep 14 14:24:35 KST 2020]; root of context hierarchy
+2020-09-14 14:24:37.533  INFO 39913 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-09-14 14:24:37.552  INFO 39913 --- [main] m.y.Application                          : Started Application in 2.578 seconds (JVM running for 3.486)
+2020-09-14 14:24:37.554 DEBUG 39913 --- [main] m.y.SampleRunner                         : ===============
+2020-09-14 14:24:37.554 DEBUG 39913 --- [main] m.y.SampleRunner                         : hello
+2020-09-14 14:24:37.578 DEBUG 39913 --- [main] m.y.SampleRunner                         : yeoseon prod
+2020-09-14 14:24:37.579 DEBUG 39913 --- [main] m.y.SampleRunner                         : ===============
+2020-09-14 14:24:37.580  INFO 39913 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@68dc098b: startup date [Mon Sep 14 14:24:35 KST 2020]; root of context hierarchy
+2020-09-14 14:24:37.583  INFO 39913 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
