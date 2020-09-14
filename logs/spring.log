@@ -1242,3 +1242,15 @@ Unconditional classes:
 2020-09-14 14:00:51.120 DEBUG 39270 --- [main] me.yeoseon.SampleRunner                  : ===============
 2020-09-14 14:00:51.122  INFO 39270 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@ed7f8b4: startup date [Mon Sep 14 14:00:49 KST 2020]; root of context hierarchy
 2020-09-14 14:00:51.125  INFO 39270 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-09-14 14:07:12.480  INFO 39552 --- [main] me.yeoseon.Application                   : Starting Application on yun-yeoseon-ui-MacBookPro-3.local with PID 39552 (started by yyskr in /Users/yyskr/Documents/Dev/15 Spring Study/springboot-getting-started)
+2020-09-14 14:07:12.484 DEBUG 39552 --- [main] me.yeoseon.Application                   : Running with Spring Boot v2.0.3.RELEASE, Spring v5.0.7.RELEASE
+2020-09-14 14:07:12.486  INFO 39552 --- [main] me.yeoseon.Application                   : The following profiles are active: prod,proddb
+2020-09-14 14:07:12.589  INFO 39552 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@942a29c: startup date [Mon Sep 14 14:07:12 KST 2020]; root of context hierarchy
+2020-09-14 14:07:14.108  INFO 39552 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-09-14 14:07:14.129  INFO 39552 --- [main] me.yeoseon.Application                   : Started Application in 2.515 seconds (JVM running for 2.977)
+2020-09-14 14:07:14.132 DEBUG 39552 --- [main] me.yeoseon.SampleRunner                  : ===============
+2020-09-14 14:07:14.132 DEBUG 39552 --- [main] me.yeoseon.SampleRunner                  : hello
+2020-09-14 14:07:14.152 DEBUG 39552 --- [main] me.yeoseon.SampleRunner                  : yeoseon prod
+2020-09-14 14:07:14.153 DEBUG 39552 --- [main] me.yeoseon.SampleRunner                  : ===============
+2020-09-14 14:07:14.155  INFO 39552 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@942a29c: startup date [Mon Sep 14 14:07:12 KST 2020]; root of context hierarchy
+2020-09-14 14:07:14.158  INFO 39552 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
