@@ -8,8 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.awt.*;
-
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -32,7 +30,7 @@ public class UserControllerTest {
 
     @Test
     public void createUser_JSON() throws Exception {
-        String userJson = "";
+        String userJson = "{\"username\":\"yeoseon\", \"password\":\"123\"}";
 
         mockMvc.perform(post("/users/create")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
