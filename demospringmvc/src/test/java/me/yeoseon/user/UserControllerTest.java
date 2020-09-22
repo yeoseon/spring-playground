@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class UserControllerTest {
 
     @Autowired
-    MockMvc mockMvc;       //WebMvcTest 어노테이션을 사용할 경우, MockMvc는 자동으로 Bean으로 등록되어 이렇게 사용할 수 있다.  
+    MockMvc mockMvc;       //WebMvcmmit -Test 어노테이션을 사용할 경우, MockMvc는 자동으로 Bean으로 등록되어 이렇게 사용할 수 있다.
 
     @Test
     public void hello() throws Exception {
