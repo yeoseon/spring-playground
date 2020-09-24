@@ -1,4 +1,4 @@
-package me.yeoseon.user;
+package me.yeoseon.sample;
 
 import me.yeoseon.sample.SampleController;
 import org.junit.Test;
