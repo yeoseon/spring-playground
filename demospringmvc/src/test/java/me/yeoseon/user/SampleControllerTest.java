@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
@@ -23,6 +24,7 @@ public class SampleControllerTest {
     public void hello() throws Exception {
         mockMvc.perform(get("/sample/hello"))
                 .andExpect(status().isOk())
+                .andDo(print())
                 .andExpect(view().name("sampleHello"))
                 .andExpect(model().attribute("name", is("yeoseon")));      // 모델 이름 : yeoseon, 뷰 이름 : hello
     }
