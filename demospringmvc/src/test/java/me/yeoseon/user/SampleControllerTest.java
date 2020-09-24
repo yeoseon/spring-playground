@@ -1,5 +1,6 @@
 package me.yeoseon.user;
 
+import me.yeoseon.sample.SampleController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,9 @@ public class SampleControllerTest {
 
     @Test
     public void hello() throws Exception {
-        mockMvc.perform(get("/hello"))
+        mockMvc.perform(get("/sample/hello"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("hello"))
+                .andExpect(view().name("sampleHello"))
                 .andExpect(model().attribute("name", is("yeoseon")));      // 모델 이름 : yeoseon, 뷰 이름 : hello
     }
 }
