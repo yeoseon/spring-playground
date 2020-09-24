@@ -8,6 +8,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -26,6 +27,7 @@ public class SampleControllerTest {
                 .andExpect(status().isOk())
                 .andDo(print())
                 .andExpect(view().name("sampleHello"))
-                .andExpect(model().attribute("name", is("yeoseon")));      // 모델 이름 : yeoseon, 뷰 이름 : hello
+                .andExpect(model().attribute("name", is("yeoseon")))      // 모델 이름 : yeoseon, 뷰 이름 : hello
+                .andExpect(content().string(containsString("yeoseon")));      // Rendering 된 View 결과도 확인할 수 있다.
     }
 }
