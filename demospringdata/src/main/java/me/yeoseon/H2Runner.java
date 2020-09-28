@@ -3,6 +3,7 @@ package me.yeoseon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
@@ -12,8 +13,12 @@ import java.sql.Statement;
 @Component
 public class H2Runner implements ApplicationRunner {
 
+    // JDBC 의존성 추가시 아래 2개의 객체를 바로 사용할 수 있다.
     @Autowired
     DataSource dataSource;
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -27,5 +32,10 @@ public class H2Runner implements ApplicationRunner {
             String sql = "CREATE TABLE USER (ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (id))";
             statement.executeUpdate(sql);
         }
+
+        // jdbcTamplate을 사용할 경우 위의 많은 줄을 아래와 같이 간결하고 안전하게 (try-catch 처리가 알아서 됨) sql을 사용할 수 있다.
+        // 에러시, 가독성이 더 높은 메시지를 확인할 수 있다.
+        // 위 try 내부보다는, 이 jdbcTamplate을 사용하자.
+        jdbcTemplate.execute("INSERT INTO USER VALUES (1, 'yeoseon')");
     }
 }
