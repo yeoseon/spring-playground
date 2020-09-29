@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -52,11 +53,10 @@ public class AccountRepositoryTest {
 
         assertThat(newAccount.getId()).isNotNull();
 
-        Account existingAccount = accountRepository.findByUsername(newAccount.getUsername());
-        assertThat(existingAccount).isNotNull();
-        assertThat(existingAccount.getPassword()).isEqualTo("pass");
+        Optional<Account> existingAccount = accountRepository.findByUsername(newAccount.getUsername());
+        assertThat(existingAccount).isNotEmpty();
 
-        Account notExistingAccount = accountRepository.findByUsername("celine");
-        assertThat(notExistingAccount).isNull();
+        Optional<Account> notExistingAccount = accountRepository.findByUsername("celine");
+        assertThat(notExistingAccount).isEmpty();
     }
 }
