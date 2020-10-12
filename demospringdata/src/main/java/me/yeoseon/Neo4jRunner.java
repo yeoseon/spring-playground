@@ -1,6 +1,7 @@
 package me.yeoseon;
 
 import me.yeoseon.neo4jaccount.Account;
+import me.yeoseon.neo4jaccount.AccountRepository;
 import me.yeoseon.neo4jaccount.Role;
 import org.neo4j.ogm.session.Session;
 import org.neo4j.ogm.session.SessionFactory;
@@ -15,6 +16,9 @@ public class Neo4jRunner implements ApplicationRunner {
     @Autowired
     SessionFactory sessionFactory;
 
+    @Autowired
+    AccountRepository accountRepository;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Account account = new Account();
@@ -27,8 +31,10 @@ public class Neo4jRunner implements ApplicationRunner {
 
         account.getRoles().add(role);
 
-        Session session = sessionFactory.openSession();
-        session.save(account);
-        sessionFactory.close();
+//        Session session = sessionFactory.openSession();
+//        session.save(account);
+//        sessionFactory.close();
+
+        accountRepository.save(account);
     }
 }
