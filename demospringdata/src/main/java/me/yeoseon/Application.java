@@ -1,10 +1,12 @@
 package me.yeoseon;
 
 import me.yeoseon.mongdbaccount.Account;
+import me.yeoseon.mongdbaccount.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
@@ -13,6 +15,9 @@ public class Application {
 
     @Autowired
     MongoTemplate mongoTemplate;
+
+    @Autowired
+    AccountRepository accountRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -27,7 +32,8 @@ public class Application {
             account.setEmail("devyyskr@gmail.com");
             account.setUsername("yeoseon");
 
-            mongoTemplate.insert(account);
+//            mongoTemplate.insert(account);
+            accountRepository.insert(account);
         };
     }
 }
