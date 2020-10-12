@@ -2,6 +2,10 @@ package me.yeoseon.neo4jaccount;
 
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.Relationship;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @NodeEntity
 public class Account {
@@ -12,6 +16,9 @@ public class Account {
     private String userName;
 
     private String email;
+
+    @Relationship(type = "has")
+    private Set<Role> roles = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -35,5 +42,13 @@ public class Account {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }
