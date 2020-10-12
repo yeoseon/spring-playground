@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Account {
 
     @Id
-    @GeneratedValue   // 자동으로 생성되도록 설정
+    @GeneratedValue(strategy = GenerationType.IDENTITY)   // 자동으로 생성되도록 설정
     private Long id;
 
     private String username;
