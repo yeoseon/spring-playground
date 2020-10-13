@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -24,6 +25,7 @@ public class HomeControllerTest {
 
     //Controller가 View를 잘 호출하는지 슬라이싱 테스트를 통해 테스트한다.
     @Test
+    @WithMockUser
     public void hello() throws Exception {
         mockMvc.perform(get("/hello")
                     .accept(MediaType.TEXT_HTML))
@@ -32,7 +34,16 @@ public class HomeControllerTest {
                 .andExpect(view().name("hello"));
     }
 
+    //Controller가 View를 잘 호출하는지 슬라이싱 테스트를 통해 테스트한다.
     @Test
+    public void hello_without_user() throws Exception {
+        mockMvc.perform(get("/hello"))
+                .andDo(print())
+                .andExpect(status().isUnauthorized());
+    }
+
+    @Test
+    @WithMockUser
     public void my() throws Exception {
         mockMvc.perform(get("/my"))
                 .andDo(print())
